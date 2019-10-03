@@ -1,0 +1,20 @@
+•	Matrices and arrays:
+•	Matrix() and arguments, by default, 
+•	Filling direction -> column-wise fasion, show by arrows
+•	Row and column binding, rbind, cbind, length
+•	Matrix dimension: Dim(), nrow(), ncol()
+•	Subsetting like vectors [], row-column extraction, diag()
+•	Delete, Overwrite 
+•	Matrix Operations: t(), diag(), 2*A, +, - (element-wise), %*%, not commutative, solve(A), A%*%solve(A)
+•	Multidimensional arrays: [row, column, layer] array(c(), dim =c())
+•	[row, column,layer, block], column-wise, starting with 1st layer, subseting
+
+•	Non-numeric values: 
+•	Logicals: TRUE, FALSE, T,F, (x<- T), c(T,T,F,F), 
+•	Logical outputs: Relational Operators
+•	vector == vector, vector < 3, matrix == matrix(element-wise behavior)
+•	any(), all().
+
+•	MultipleComparisons: Logical Operators (elemen-wise and single) xor, !, |, &, &&, ||
+•	Logical - numbers, subsetting, which(), arr.ind
+
