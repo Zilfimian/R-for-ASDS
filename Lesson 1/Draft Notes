@@ -1,0 +1,10 @@
+Download/ install
+
+•	Opening R, R console, prompt, change prompt, save, new editor, GUI Preference
+•	Comments
+•	Working directories, path, getwd(), setwd()
+•	Load Package, install package, update package, CRAN, 
+•	Help ?, ?? ls()
+•	Built-in functions log, exp, sqrt, PEMDAS, e notation, object assignment, assigning operators
+•	R studio (Markdown, R script, R project)
+•	R markdown: Install, open, YAML, Knit, Code chunk, inline code, bullets, image, link, table
