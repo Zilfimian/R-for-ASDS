@@ -1,0 +1,11 @@
+
+•	Assigning objects (variable), operators 
+•	<- vs =,    ls(names, pattert), 	why not =,	 rm(), 		<<-
+
+Vectors: 
+•	Create vector with c(), arithmetic, object, number, vectors
+•	Seq, rep, sort, length
+•	Subsetting [], length, [-1], original value, [c()], [:], order, any length, with name
+•	Replacement, overwrite, length
+•	Vector-oriented behavior
+•	Sum, cumsum, prod, cumprod, mean, max, min
