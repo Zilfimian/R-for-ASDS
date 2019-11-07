@@ -1,0 +1,209 @@
+---
+title: "Homework Assignment 1"
+author: "Lusine Zilfimian"
+date: |
+  `r format(Sys.time(), '%B %d, %Y')` 
+output: 
+  html_document:
+    toc: TRUE
+    toc_depth: 4
+    toc_float: true
+    toc_collapse: true
+    theme: united
+    highlight: zenburn
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+***
+# Requirements 
+
+**File format:** *For this Homework, you are required to submit both R Markdown and HTML files with your answers and codes in it. Make sure that Rmd file works so that there won't be any errors when it is run and represent the same information as HTML. Under each question write the code along with your interpretations (not in comments). Be sure to put your name at the top of your assignment (in the YAML header in front of the author).*
+
+**Due date:** *06.10.19 23:55. No late homework will be accepted.*
+
+**Submission:** *You need to upload/create files in <b>private</b> [GitHub repository](https://help.github.com/en/articles/create-a-repo) and [share](https://help.github.com/en/articles/inviting-collaborators-to-a-personal-repository) with [me](https://github.com/Zilfimian). Then, submit the link of your repository in the file uploaded on Google Drive (Submetted HW).*
+
+**Suggestion:** *Start with creating a framework for your R Markdown file, rewrite the tasks and only then start to solve the tasks.*
+
+**Rule of thumb:** *If the number of data points is greater than 100, use subsets, do not print the whole data. Try to show all outputs (do not just store the object as a variable). Also, please, avoid using the same name for variables in the file.*
+
+**Cheating:** *The purpose of tasks is to check your knowledge (rather than the ability of thinking). Please, try to solve without googling every exercise. Try not to discuss with your classmates and work only on your file. Any similarities, which can be considered as cheated, will not be graded.*
+
+***
+
+
+<style>
+div.ewd { background-color:#F2D7D5; border-radius: 5px; padding: 20px;}
+</style>
+
+# Task 1 (2 points): Accuracy  
+
+<div class = "ewd">
+
+**Replicate all the details from the Homework assignment (HTML). It can be slightly different from the HW Assignment style e.g. other color/theme, but it cannot be the same as default options. Pay attention to:**
+
+a. Table of content, its structure, and design.
+
+b. Task highlights and order.
+
+c. Breaks, line breaks and letters modes (bold, italicized, etc.).
+
+d. Links and pictures^[Pay attention to this reference, too :). You can find the picture uploaded on Google Drive].
+
+e. Formulas, signs and inline codes.
+
+f. etc :)
+
+</div>
+
+<br>
+
+***
+
+# Task 2 (1 point): Arithmetics & Vectors
+
+<div class = "ewd">
+
+ a. Calcualte $$\log_2\frac{sin(\frac{\pi}{2}) + e}{\sqrt{a}} * 20^{10},$$ when $a = 25$. *Note:* there should not be any scientific notations. Is the number less than 0?
+ 
+ b. Create and show (the first 5 elements) of the following vectors:
+
+ *	$x = (151.5, 150, 148.5, ..., 9)$
+ * 	$y = (5, 5, 8, 8, -5, -5, 5, 5, 8, 8, -5, ..., -5)$
+
+ The number of elements of x should be twice greater than of y. Use appropriate function to create the vectors.
+ 
+ c. Add (avelatsnel (to the end)) the average value of the vector x to the vector y. Use vector arithmetic to multiply these vectors and store the result in z. Is there a warning? Why? 
+ 
+ d.	What are the 29th, 51st, 61st, and 78th elements of z? Overwrite these elements of the resulting vector with the two recycled values 0 and 1, in that order. Is there a warning? Why? 
+ 
+ e.	What are the elements (and how many) of the z which are greater than or equal to 1000? Find their indices.
+ 
+ 
+</div>
+
+<br>
+
+
+## Solution 2^[For illustration]
+
+***
+
+# Task 3 (1 point): Matricies
+
+<div class = "ewd">
+
+Use R to create the following two matrices and do the matrix multiplication. Use the optional argument `byrow` to fill the first matrix in the column-wise fashion and the second one in the row-wise fashion.
+
+$$
+\frac{1}{2}
+\left(\begin{array}{cc} 
+1 & 1 & 0\\
+2 & 3 & 1\\
+2 & 3 & 2
+\end{array}\right)
+\left(\begin{array}{cc} 
+1 & 0\\ 
+2 & 1\\
+1 & 0
+\end{array}\right)
+$$ 
+  
+
+ a. What is the resulting matrix and its dimension? Show that multiplication is not commutative. 
+
+ b. Extract a sub-matrix from the resulting matrix and save in `subC`. It should be a 2x2 matrix which includes the last two rows and corresponding columns. Find its transpose.  
+
+ c. Check whether R is stored `subC` as a matrix and whether its value is numeric.
+
+ d. Make the diagonal elements of the matrix `subC` 0. 
+
+ e. Verify that $subC^{-1}subC = subCsubC^{-1} = I_2$, using the relational operators. How is the comparison done? 
+
+
+</div>
+
+<br>
+
+## Solution 3
+
+# Task 4 (2 points): Lists, Array & Data Frame
+
+<div class = "ewd">
+
+ a. Create a list containing 
+ 
+  * Vectors: the first two vectors of the second problem.
+  * Matrix: sub-matrix of problem 3. 
+  * Three-dimensional array of 1x29 matrices obtaining from the concatenation of two vectors of problem 2. How many layers are required to fill the array completely?
+
+ b. Subtract from each element of the first vector **from the list** the average value of the second vector. Use the different methods for accessing the objects. 
+ 
+ c. Remove the second vector and subC from the list by one-line code. How many components does the new list have? Give the names to the elements of the list.
+ 
+ d. Create and store this data frame as `dframe`:
+ 
+```{r echo=FALSE}
+dframe <- data.frame(
+  Name = c("Eric Clapton", "Jimi Hendrix", "Joe Satriani", "Steven Vai", "Orianthi Panagaris", " Lita Ford"),
+  Year = c(1945, 1942, 1956, 1960, 1985, 1958),
+  Gender = factor(c(0,0,0,0,1,1), levels = c(0,1), labels = c("M", "F")),
+  Rating = factor(c(3,2,4,3,1,1), level = c(1,2,3,4), labels = c("Low", "Med", "High", "Love"), ordered = T), stringsAsFactors = F
+  )
+knitr::kable(dframe)
+```
+
+**Note:**
+
+```{r echo=FALSE}
+str(dframe)
+```
+ 
+ Add to the data new variable year with the birth year of corresponding person $1945; 1942; 1956; 1960; 1985; 1958$. Check the structure of the data. 
+ 
+ e. Calculate the age of guitarist apart from Jimi Hendrix using the relational operators. Store the result in the vector. Use the vector to append this information as a new variable in `dframe` called `Age`. The age for Jimi Hendrix should be missed.  
+ 
+ f. Create a new observation with your favorite guitarist and combine this observation with the data.
+ 
+ g. Show the first 5 observations of the last component in the list. Add the data frame as a new component `'DF'` to the list. Access to the female guitarists in the list. 
+ 
+
+</div>
+
+<br>
+
+## Solution 4
+
+***
+
+# Task 5 (1 point): Kable
+
+<div class = "ewd">
+
+Obtain the following result:
+
+![](Table1.PNG)
+
+</div> 
+
+## Solution 5
+
+***
+
+# Task 6 (1 point): Questions
+
+<div class = "ewd">
+
+ a. How many assigning operators does R have? What is/are the difference/s among/between them? Bring the R code examples.
+ b. Why do we need a data frame if we already have a matrix?
+ c. How many outputs can R diag() function have? What does it depend on?
+ d. What is the difference between `echo = T` and `echo = F`. Specify other useful R chunks/global options.
+ e. What does `[1]` in the output mean?
+ f. Compare the following object types: data frame, lists, and array.
+ g. How much time did it take you to accomplish the HW?
+</div> 
+
+## Solution 6
