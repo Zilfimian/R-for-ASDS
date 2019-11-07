@@ -1,1 +1,30 @@
+•	Data frames and lists:
+1.	Mix of any structure of objects: list(), length()-number of components
+2.	Access [[]]+5,[[]][1,2], but not [[c(1,2)]], thus [c(1,2)], replacement <-
+3.	Order
+4.	Naming: names(my_list) <- c(), NA, my_list$A, the same as [[1]]
+5.	All([[]]=$)
+6.	Names inside the list: list(name = c())
+7.	Nesting: my_list$name$name
+8.	Unlist()
+9.	Data frame: the members must all be vectors of equal length.
+10.	Construct: dara.frame(name = , age = ), different length problem
+11.	Record, variable
+12.	Index [like matrix], $, ncol(), nrow(), dim()
+13.	Data.frame(stringsAsFactors=FALSE)
+14.	Add column and combining data: rbind(newdata, olddata): The same name and type
+15.	Adding variable with cbind, $
+16.	Logical record Subsets, data[data$v==F,]
+17.	data[data$v==F,c(“”,””,””)]
+18.	mydata[mydata$age>10|mydata$funny=="High",]
+19.	View(),edit(), head(), tail(), str(), summary, Glimpse, class(), typeof, table()
+20.	We reference a data frame column with the double square bracket "[[]]" operator.
+21.	[1]
+22.	Accessing with [[ or $ is similar. However, it differs for [ in that, indexing with [ will return us a data frame but the other two will reduce it into a vector.
+
+•	Calling functions
+1.	Scoping – global and local environments: matrix(data =)
+2.	Search Path, Environment()
+3.	Reserved objects:
+4.	Argument matching (exact, positional, mixed. Dot-dot)
 
