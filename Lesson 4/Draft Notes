@@ -1,1 +1,14 @@
+•	NNV: Factors and Strings
+-	finite number, identifying – factor()
+- attached: attribute: levels
+-	define order levels, combining 
+-	new level, new variable, all levels
+•	Special Values, Classes, Coercion
+-	Inf, NaN, NA, NULL
+-	Inf, is'., is.finite(), is.infinite()
+-	NaN, is.nan(), !NaN, NaN +
+-	With respect to numeric operations
+-	NA, is.numeric, factors, calculations, na.omit 
+-	NULL - empty entity, Na - position accessed, length
+-	Case sensitive 
 
